@@ -1,0 +1,23 @@
+{
+  "name": "cronkite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ss": "node .",
+    "ws": "./app/web/node_modules/.bin/webpack-dev-server --port 3001 --content-base ./app/web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-zhang/cronkite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-zhang/cronkite/issues"
+  },
+  "homepage": "https://github.com/alex-zhang/cronkite#readme",
+  "dependencies": {
+  }
+}
