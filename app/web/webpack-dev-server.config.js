@@ -2,6 +2,8 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const precss       = require('precss');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
 
@@ -30,7 +32,7 @@ module.exports = {
     loaders: [
       {
         test: /\.styl$/,
-        loader: 'style!css!stylus'
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!autoprefixer!stylus'
       },
       {
         test: /\.js[x]?$/,
