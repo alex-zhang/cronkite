@@ -4,9 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {green100, green500, green700} from 'material-ui/styles/colors';
-import App from './containers/App';
 
 import './styles/index.styl';
+import App from './containers/App';
 
 injectTapEventPlugin();
 
