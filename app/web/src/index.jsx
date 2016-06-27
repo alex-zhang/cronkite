@@ -8,6 +8,8 @@ import {green100, green500, green700} from 'material-ui/styles/colors';
 import './styles/index.styl';
 import App from './containers/App';
 
+import SocketIO from 'socket.io-client'
+
 injectTapEventPlugin();
 
 const muiTheme = getMuiTheme({
@@ -23,12 +25,23 @@ const muiTheme = getMuiTheme({
   //userAgent: req.headers['user-agent'],
 });
 
-console.log(App)
+//console.log(App)
 
 const app = (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <App>asd</App>
+    <App></App>
   </MuiThemeProvider>
 );
+
+const socketClient = SocketIO(location.origin);
+socketClient.on('connect', () => {
+  console.log('connect!');
+});
+socketClient.on('event', (data) => {
+  console.log('on data!');
+});
+socketClient.on('disconnect', () => {
+  console.log('disconnect!');
+});
 
 ReactDOM.render(app, document.getElementById('app'));

@@ -27,15 +27,6 @@ class JobListPanel extends React.Component {
           <TableBody>
 
           </TableBody>
-
-          <TableFooter>
-            <TableRow>
-              <TableRowColumn>Id</TableRowColumn>
-              <TableRowColumn>Name</TableRowColumn>
-              <TableRowColumn>Icon</TableRowColumn>
-              <TableRowColumn>Status</TableRowColumn>
-            </TableRow>
-          </TableFooter>
         </Table>
       </div>
     )
