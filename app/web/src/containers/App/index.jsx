@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-import PageDrawer from '../PageDrawer';
+import Header from '../Header';
 import Footer from '../Footer';
 import JobListPanel from '../JobListPanel';
 
@@ -12,16 +12,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
-       <div className={styles.two_col}>
-         <PageDrawer />
-         <div style={{width:'12px'}} />
-         <JobListPanel />
-       </div>
-
-        <div style={{height:'20px'}} />
-
-       <Footer />
+        <Header />
+        {this.props.children}
+        <Footer />
       </div>
     )
   }
